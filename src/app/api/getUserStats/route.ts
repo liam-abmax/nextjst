@@ -7,10 +7,13 @@ export async function GET(request: Request) {
   const user_id = url.searchParams.get('user_id') || '153';
   const temperature = url.searchParams.get('temperature') || '50';
 
+  // Add the degree Celsius suffix
+  const temperatureWithUnit = `${temperature} °C`;
+  
   // Create the user statistics object
   const userStats = {
     user_id: user_id,
-    temperature: temperature,
+    temperature: temperatureWithUnit,
     blood_pressure: '180/80 mmHg',
     heart_rate: '70 bpm',
     sleep_duration: '3 hours',
