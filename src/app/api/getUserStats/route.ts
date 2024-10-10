@@ -14,10 +14,10 @@ export async function GET(request: Request) {
   const userStats = {
     user_id: user_id,
     temperature: temperatureWithUnit,
-    blood_pressure: '180/80 mmHg',
-    heart_rate: '70 bpm',
-    sleep_duration: '3 hours',
-    blood_sugar: '100 mg/dL'
+    blood_pressure: '220/100 mmHg',
+    heart_rate: '90 bpm',
+    sleep_duration: '2 hours',
+    blood_sugar: '200 mg/dL'
     // Add other stats properties as needed
   };
 
