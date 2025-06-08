@@ -5,7 +5,7 @@ export async function POST(request: Request) {
     const { userId, amount, source } = body;
 
     // Basic validation
-    if (!userId || !amount || typeof amount !== 'number' || amount <= 0) {
+    if ( !amount || typeof amount !== 'number' || amount <= 0) {
         return NextResponse.json({ status: 'error', message: 'Invalid receive details' }, { status: 400 });
     }
 
